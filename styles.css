@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Basic&family=Nunito+Sans:ital,wght@1,300&display=swap");
+@media (max-width: 768px) {
+  header nav label img {
+    display: inline-block;
+  }
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body header {
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Basic', sans-serif;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body header nav {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  -webkit-box-shadow: 1px 0px 0.35rem black;
+          box-shadow: 1px 0px 0.35rem black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav div {
+  margin-left: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav div img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+body header nav div h4 {
+  margin: 0rem 1rem;
+}
+
+body header nav label img {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: none;
+}
+
+body header nav label input {
+  display: none;
+}
+
+body header nav ul {
+  margin: auto 0px;
+  list-style-type: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-width: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav ul li {
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+}
+
+body header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+body header nav ul li:hover {
+  -webkit-box-shadow: 1px 1px 0.2rem black;
+          box-shadow: 1px 1px 0.2rem black;
+  cursor: pointer;
+}
+
+body header nav ul li:active {
+  background-color: black;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body header > div {
+  height: 60%;
+  width: 60%;
+  -webkit-box-shadow: 1px 1px 0.5rem black;
+          box-shadow: 1px 1px 0.5rem black;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body header > div img {
+  position: absolute;
+  height: 70%;
+  top: 15%;
+  left: -150px;
+  -webkit-box-shadow: 1px 1px 0.2rem black;
+          box-shadow: 1px 1px 0.2rem black;
+}
+
+body header > div p {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+body main #about {
+  min-height: 100vh;
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body main #about > div {
+  border-radius: 0.5rem;
+  position: relative;
+  height: 60%;
+  width: 60%;
+  -webkit-box-shadow: 1px 1px 0.5rem black;
+          box-shadow: 1px 1px 0.5rem black;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+body main #about > div h1 {
+  font-family: 'Basic', sans-serif;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+body main #about > div p {
+  text-align: center;
+  padding: 2rem;
+  font-family: 'Basic', sans-serif;
+  font-size: 1.4rem;
+}
+
+body main #about > div img {
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  left: -175px;
+  -webkit-box-shadow: 1px 1px 0.2rem black;
+          box-shadow: 1px 1px 0.2rem black;
+}
+
+body main .row:nth-child(2) {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-family: 'Basic', sans-serif;
+}
+
+body main .row:nth-child(2) > div {
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  margin: 2rem;
+  -webkit-box-shadow: 1px 0 0.5rem -1px black;
+          box-shadow: 1px 0 0.5rem -1px black;
+  padding: 1rem;
+  position: relative;
+}
+
+body main .row:nth-child(2) > div img {
+  position: absolute;
+  height: 60%;
+  top: 20%;
+  right: -150px;
+  -webkit-box-shadow: 1px 1px 0.2rem rgba(255, 255, 255, 0.295);
+          box-shadow: 1px 1px 0.2rem rgba(255, 255, 255, 0.295);
+}
+
+body main .row:nth-child(2) > div h1 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+body main .row:nth-child(2) > div h3 {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+body main .row:nth-child(2) > div p {
+  font-family: 'Nunito Sans', sans-serif;
+  margin: 1rem;
+  font-size: 1.25rem;
+}
+
+body main #knowledge {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  font-family: 'Basic', sans-serif;
+}
+
+body main #knowledge > div {
+  border-radius: 0.5rem;
+  background: linear-gradient(-45deg, rgba(255, 255, 255, 0.205), rgba(0, 0, 0, 0.103));
+  -webkit-box-shadow: 1px 0 0.5rem rgba(255, 255, 255, 0.24), 1px 1px 0.5rem black;
+          box-shadow: 1px 0 0.5rem rgba(255, 255, 255, 0.24), 1px 1px 0.5rem black;
+  min-height: 70%;
+  display: -ms-grid;
+  display: grid;
+}
+
+body main #knowledge > div h1 {
+  margin: 2rem 0px;
+  font-size: 3rem;
+}
+
+body main #knowledge > div ul {
+  list-style-type: none;
+}
+
+body main #knowledge > div > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main #knowledge > div > ul li {
+  text-align: center;
+  color: black;
+  padding: 1rem;
+}
+
+body main #knowledge > div > ul li h5 {
+  font-family: 'Nunito Sans', sans-serif;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
+body main #knowledge > div > ul li ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body main #projects {
+  font-family: 'Basic', sans-serif;
+}
+
+body main #projects h1 {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 2rem auto;
+  font-size: 3rem;
+}
+
+body main #projects .bigproj {
+  position: relative;
+  padding: 2rem;
+  -webkit-box-shadow: 1px 0 0.2rem black;
+          box-shadow: 1px 0 0.2rem black;
+  border-top-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+body main #projects .bigproj h3 {
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+
+body main #projects .bigproj p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5rem;
+  word-spacing: 5px;
+}
+
+body main #projects .bigproj h5 {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+body main #projects .bigproj img {
+  position: absolute;
+  height: 70%;
+  top: 15%;
+  left: -150px;
+}
+
+body main #projects .bigproj div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main #projects .bigproj div button {
+  font-family: 'Nunito Sans', sans-serif;
+  border: none;
+  padding: 0.5rem 2.5rem;
+  font-size: 1.5rem;
+  background-color: white;
+  -webkit-box-shadow: 1px 0 0.2rem black;
+          box-shadow: 1px 0 0.2rem black;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  outline: none;
+}
+
+body main #projects .bigproj div button:hover {
+  cursor: pointer;
+  color: #120a80;
+  text-decoration: underline;
+}
+
+body main #projects .bigproj div button:active {
+  background-color: black;
+  color: white;
+}
+
+body main #projects .bigproj:nth-child(odd) {
+  -webkit-box-shadow: -1px 0 0.2rem black;
+          box-shadow: -1px 0 0.2rem black;
+}
+
+body main #projects .bigproj:nth-child(odd) img {
+  top: 15%;
+  right: -150px;
+}
+
+body main #projects .smallproj {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+body main #projects .smallproj > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body main #projects .smallproj > div > div {
+  -webkit-box-shadow: 1px 0 0.2rem black;
+          box-shadow: 1px 0 0.2rem black;
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+body main #projects .smallproj > div > div h3 {
+  font-family: 'Basic', sans-serif;
+  font-size: 2rem;
+}
+
+body main #projects .smallproj > div > div p {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.5rem;
+  padding: 2rem 0px;
+}
+
+body main #projects .smallproj > div > div div {
+  display: none;
+}
+/*# sourceMappingURL=styles.css.map */
