@@ -324,18 +324,22 @@ body main #projects .bigproj h5 {
 
 body main #projects .bigproj img {
   position: absolute;
-  height: 70%;
-  top: 15%;
+  height: 60%;
+  top: 20%;
   left: -150px;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 1px 0 0.2rem black;
+          box-shadow: 1px 0 0.2rem black;
+  -webkit-filter: saturate(90%) brightness(90%) contrast(90%);
+          filter: saturate(90%) brightness(90%) contrast(90%);
 }
 
 body main #projects .bigproj div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 body main #projects .bigproj div button {
@@ -362,14 +366,14 @@ body main #projects .bigproj div button:active {
   color: white;
 }
 
-body main #projects .bigproj:nth-child(odd) {
+body main #projects .bigproj:nth-child(even) {
   -webkit-box-shadow: -1px 0 0.2rem black;
           box-shadow: -1px 0 0.2rem black;
 }
 
-body main #projects .bigproj:nth-child(odd) img {
-  top: 15%;
-  right: -150px;
+body main #projects .bigproj:nth-child(even) img {
+  top: 20%;
+  left: 70%;
 }
 
 body main #projects .smallproj {
@@ -383,8 +387,13 @@ body main #projects .smallproj > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  margin: 2rem 1rem;
 }
 
 body main #projects .smallproj > div > div {

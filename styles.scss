@@ -238,13 +238,16 @@ body {
 				}
 				img {
 					position: absolute;
-					height: 70%;
-					top: 15%;
+					height: 60%;
+					top: 20%;
 					left: -150px;
+					border-radius: 0.5rem;
+					box-shadow: 1px 0 0.2rem black;
+					filter: saturate(90%) brightness(90%) contrast(90%);
 				}
 				div {
 					display: flex;
-					justify-content: center;
+					justify-content: space-around;
 					button {
 						font-family: 'Nunito Sans', sans-serif;
 						border: none;
@@ -266,11 +269,11 @@ body {
 						}
 					}
 				}
-				&:nth-child(odd) {
+				&:nth-child(even) {
 					box-shadow: -1px 0 0.2rem black;
 					img {
-						top: 15%;
-						right: -150px;
+						top: 20%;
+						left: 70%;
 					}
 				}
 			}
@@ -280,7 +283,9 @@ body {
 				place-items: center;
 				& > div {
 					display: flex;
+					flex-direction: row;
 					justify-content: space-around;
+					margin: 2rem 1rem;
 					& > div {
 						box-shadow: 1px 0 0.2rem black;
 						border-radius: 0.5rem;
