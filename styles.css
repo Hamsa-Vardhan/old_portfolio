@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Basic&family=Nunito+Sans:ital,wght@1,300&display=swap");
-@media (max-width: 768px) {
-  header nav label img {
-    display: inline-block;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -10,9 +8,11 @@ body {
   margin: 0px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body header {
+  background: url("https://images.unsplash.com/photo-1516541196182-6bdb0516ed27?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1868&q=80");
   min-height: 100vh;
   width: 100vw;
   font-family: 'Basic', sans-serif;
@@ -22,10 +22,11 @@ body header {
 }
 
 body header nav {
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0px;
   left: 0px;
+  z-index: 10000;
   -webkit-box-shadow: 1px 0px 0.35rem black;
           box-shadow: 1px 0px 0.35rem black;
   display: -webkit-box;
@@ -69,12 +70,10 @@ body header nav div h4 {
 }
 
 body header nav label img {
-  width: 1.5rem;
-  height: 1.5rem;
   display: none;
 }
 
-body header nav label input {
+body header nav input {
   display: none;
 }
 
@@ -98,14 +97,18 @@ body header nav ul li {
 }
 
 body header nav ul li a {
-  text-decoration: none;
   color: black;
+}
+
+body header nav ul li a:hover {
+  text-decoration: none;
 }
 
 body header nav ul li:hover {
   -webkit-box-shadow: 1px 1px 0.2rem black;
           box-shadow: 1px 1px 0.2rem black;
   cursor: pointer;
+  background-color: white;
 }
 
 body header nav ul li:active {
@@ -117,9 +120,81 @@ body header nav ul li:active {
           user-select: none;
 }
 
+@media (max-width: 900px) {
+  body header nav label img {
+    display: block;
+  }
+  body header nav ul {
+    visibility: hidden;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    -webkit-transition: -webkit-transform 2s ease-in;
+    transition: -webkit-transform 2s ease-in;
+    transition: transform 2s ease-in;
+    transition: transform 2s ease-in, -webkit-transform 2s ease-in;
+  }
+  body header nav ul li {
+    -webkit-transform: translate(200%, -100%);
+            transform: translate(200%, -100%);
+    -webkit-transition: -webkit-transform 2s ease-in;
+    transition: -webkit-transform 2s ease-in;
+    transition: transform 2s ease-in;
+    transition: transform 2s ease-in, -webkit-transform 2s ease-in;
+  }
+  body header nav label img {
+    margin-right: 2rem;
+    -webkit-box-shadow: 1px 0 0.2rem black;
+            box-shadow: 1px 0 0.2rem black;
+    width: 2rem;
+    height: 2rem;
+    -webkit-transition: -webkit-transform 1s ease-in-out;
+    transition: -webkit-transform 1s ease-in-out;
+    transition: transform 1s ease-in-out;
+    transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  }
+  body header nav label img:hover {
+    color: blue;
+    cursor: pointer;
+  }
+  body header nav input:checked + ul {
+    visibility: visible;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 1000;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.253);
+  }
+  body header nav input:checked + ul li {
+    -webkit-transform: translate(0%, 0%);
+            transform: translate(0%, 0%);
+    margin: 1rem;
+    width: 60%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  body header nav input:checked + ul li:active {
+    background-color: black;
+    color: white;
+  }
+}
+
 body header > div {
-  height: 60%;
-  width: 60%;
+  background-color: white;
+  min-height: 60%;
+  min-width: 60%;
   -webkit-box-shadow: 1px 1px 0.5rem black;
           box-shadow: 1px 1px 0.5rem black;
   position: relative;
@@ -137,13 +212,35 @@ body header > div img {
           box-shadow: 1px 1px 0.2rem black;
 }
 
+@media (max-width: 700px) {
+  body header > div img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body header > div {
+    width: 100%;
+    margin-top: 5rem;
+  }
+}
+
 body header > div p {
   font-size: 3rem;
   letter-spacing: 2px;
   text-align: center;
 }
 
+body main img {
+  border-radius: 0.4rem;
+}
+
 body main #about {
+  background: url("https://images.unsplash.com/photo-1465173121987-373740a169b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1880&q=60");
   min-height: 100vh;
   width: 100vw;
   display: -ms-grid;
@@ -154,7 +251,7 @@ body main #about {
 body main #about > div {
   border-radius: 0.5rem;
   position: relative;
-  height: 60%;
+  min-height: 60%;
   width: 60%;
   -webkit-box-shadow: 1px 1px 0.5rem black;
           box-shadow: 1px 1px 0.5rem black;
@@ -184,12 +281,48 @@ body main #about > div img {
           box-shadow: 1px 1px 0.2rem black;
 }
 
+@media (max-width: 700px) {
+  body main #about > div img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body main #about > div img {
+    display: none;
+  }
+  body main #about > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  body main #about {
+    background: none;
+  }
+  body main #about img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
 body main .row:nth-child(2) {
   min-height: 100vh;
   display: -ms-grid;
   display: grid;
   place-items: center;
   font-family: 'Basic', sans-serif;
+  background-color: whitesmoke;
 }
 
 body main .row:nth-child(2) > div {
@@ -209,6 +342,22 @@ body main .row:nth-child(2) > div img {
   right: -150px;
   -webkit-box-shadow: 1px 1px 0.2rem rgba(255, 255, 255, 0.295);
           box-shadow: 1px 1px 0.2rem rgba(255, 255, 255, 0.295);
+}
+
+@media (max-width: 700px) {
+  body main .row:nth-child(2) > div img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body main .row:nth-child(2) > div img {
+    display: none;
+  }
 }
 
 body main .row:nth-child(2) > div h1 {
@@ -232,7 +381,7 @@ body main #knowledge {
   display: grid;
   place-items: center;
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   font-family: 'Basic', sans-serif;
 }
 
@@ -244,6 +393,7 @@ body main #knowledge > div {
   min-height: 70%;
   display: -ms-grid;
   display: grid;
+  max-width: 100vw;
 }
 
 body main #knowledge > div h1 {
@@ -259,8 +409,12 @@ body main #knowledge > div > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body main #knowledge > div > ul li {
@@ -287,6 +441,10 @@ body main #knowledge > div > ul li ul {
 }
 
 body main #projects {
+  background-color: whitesmoke;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   font-family: 'Basic', sans-serif;
 }
 
@@ -295,6 +453,10 @@ body main #projects h1 {
       justify-self: center;
   margin: 2rem auto;
   font-size: 3rem;
+}
+
+body main #projects > div {
+  background-color: white;
 }
 
 body main #projects .bigproj {
@@ -376,6 +538,32 @@ body main #projects .bigproj:nth-child(even) img {
   left: 70%;
 }
 
+@media (max-width: 700px) {
+  body main #projects .bigproj:nth-child(even) img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media (max-width: 700px) {
+  body main #projects .bigproj img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
 body main #projects .smallproj {
   min-height: 100vh;
   display: -ms-grid;
@@ -394,27 +582,117 @@ body main #projects .smallproj > div {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   margin: 2rem 1rem;
+  position: relative;
 }
 
-body main #projects .smallproj > div > div {
+@media (max-width: 700px) {
+  body main #projects .smallproj > div {
+    display: block;
+  }
+  body main #projects .smallproj > div img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  body main #projects .smallproj > div > div + div {
+    margin-top: 1rem;
+  }
+}
+
+body main #projects .smallproj > div .card {
+  padding: 0px;
   -webkit-box-shadow: 1px 0 0.2rem black;
           box-shadow: 1px 0 0.2rem black;
   border-radius: 0.5rem;
-  padding: 2rem;
 }
 
-body main #projects .smallproj > div > div h3 {
+body main #projects .smallproj > div .card img {
+  width: 100%;
+}
+
+body main #projects .smallproj > div .card .card-body h3 {
   font-family: 'Basic', sans-serif;
   font-size: 2rem;
 }
 
-body main #projects .smallproj > div > div p {
+body main #projects .smallproj > div .card .card-body p {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1.5rem;
   padding: 2rem 0px;
 }
 
-body main #projects .smallproj > div > div div {
-  display: none;
+body main #projects .smallproj > div .card .card-body + div a:hover {
+  text-decoration: none;
+}
+
+body main #projects .smallproj > div .card .card-body + div a button {
+  border: none;
+  outline: none;
+  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  background-color: white;
+  -webkit-box-shadow: 1px 0 0.2rem #050303;
+          box-shadow: 1px 0 0.2rem #050303;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+body main #projects .smallproj > div .card .card-body + div a button:hover {
+  color: blue;
+}
+
+body footer {
+  background: url("https://images.unsplash.com/photo-1555134473-a8e88487e828?ixlib=rb-1.2.1&w=1080&q=60");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Basic', sans-serif;
+  margin-top: 3rem;
+  -webkit-box-shadow: 1px 0 0.5rem black;
+          box-shadow: 1px 0 0.5rem black;
+  background-color: rgba(0, 0, 0, 0.082);
+}
+
+body footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body footer ul li {
+  padding: 0.5rem 2rem;
+  font-size: 1.5rem;
+  -webkit-box-shadow: 1px 0 0.5rem black;
+          box-shadow: 1px 0 0.5rem black;
+  border-top-left-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
+body footer ul li a {
+  color: black;
+}
+
+body footer ul li a:hover {
+  text-decoration: none;
+}
+
+.fa-github {
+  margin-right: 0.2rem;
 }
 /*# sourceMappingURL=styles.css.map */

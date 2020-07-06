@@ -6,6 +6,7 @@
     <title>Portfolio</title>
     <link rel="shortcut icon" href="https://images.unsplash.com/photo-1455849318743-b2233052fcff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" type="image/x-icon">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,8 +18,8 @@
             </div>
             <label for="burger">
                 <img src="./images/down-arrow.svg" alt="&#9776">
-                <input type="checkbox" name="burger" id="burger">
             </label>
+            <input type="checkbox" name="burger" id="burger">
             <ul>
                 <li> <a href="#about">about</a> </li>
                 <li> <a href="#knowledge">knowledge</a> </li>
@@ -33,10 +34,10 @@
     </header>
     <main class="container-fluid">
         <div class="row" id="about">
-            <div class="container">
+            <div class="container-fluid">
                 <h1 class="col-12 text-center">I'm</h1>
                 <img src="./images/about.jpg" alt="about me">
-                <p class="col-10 offset-2 text-center">
+                <p class="col-lg-10 offset-lg-2 text-center">
                         A fervent web developer with great enthusiasm to enrich web. 
                         I prefer to keep learning, continue challenging myself, and do interesting things that matter.
                     My abundant energy fuels me in the pursuit of many interests,
@@ -49,24 +50,24 @@
         <div class="row">
             <div class="container">
                 <h1 class="col-12 text-center">what I can do?</h1>
-                <h3 class="col-9 text-center">Design a website</h3>
-                <p class="col-9">
+                <h3 class="col-sm-12 col-lg-9 text-center">Design a website</h3>
+                <p class="col-sm-12 col-lg-9">
                     I can design and create a dynamic website that can be used in mobile and desktop.Make website look good with little animations.yes, I can do a front-end developer job.
                 </p>
                 <img src="./images/cando.png" alt="seo">
-                <h3 class="col-9 text-center">Develop a website</h3>
-                <p class="col-9">
+                <h3 class="col-sm-12 col-lg-9 text-center">Develop a website</h3>
+                <p class="col-sm-12 col-lg-9">
                     I can devolp the website.I can store  data securely and retrieve it when needed.I can create an api for the website and connect it with front-end.yes, I can do backend developer job.
                 </p>
             </div>
         </div>
         <div class="row" id="knowledge">
-            <div class="container">
-                <h1 class="col-12 text-center">I can do with?</h1>
+            <div class="container-sm-fluid container-lg">
+                <h1 class="col-sm-12 col-lg-12 text-center">I can do with?</h1>
                 <ul class="col-12">
-                    <li>
+                    <li class="col-sm-5 col-lg-3">
                         <h5>frontend</h5>
-                        <ul>
+                        <ul class="">
                             <li>
                                 Reactjs
                             </li>
@@ -75,7 +76,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="col-sm-5 col-lg-3">
                         <h5>Backend</h5>
                         <ul>
                             <li>
@@ -86,7 +87,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="col-sm-5 col-lg-3">
                         <h5>Database</h5>
                         <ul>
                             <li>
@@ -97,7 +98,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="col-sm-5 col-lg-3">
                         <h5>languages</h5>
                         <ul>
                             <li>
@@ -117,132 +118,149 @@
         <div class="row" id="projects">
             <h1 class="container text-center">what I did ?</h1>
             <div class="container bigproj my-5">
-                <h3 class="col-9 text-center">personalized chat</h3>
+                <h3 class="col-sm-12 col-lg-9 text-center">personalized chat</h3>
                 <img src="./images/chat.JPG" alt="chat">
-                <p class="col-9">
+                <p class="mt-2 col-sm-12 col-lg-9">
                     Login to your account(Authentication included).Find your friends and chat.There is a room chat too.Join a room or create a room of your own.Ask your friends to join in same room and chat.There is an add a friend option
                 </p>
-                <h5 class="col-9"><b>Dev-Dependencies : </b><i>Reactjs, mongodb, nodejs, express</i></h5>
-                <div  class="col-9"><a href="https://hava-chat.netlify.app" target="_blank"><button>visit</button></a>
-                    <a href="#" target="_blank"><button>repo</button></a>
+                <h5 class="col-sm-12 col-lg-9"><b>Dev-Dependencies : </b><i>Reactjs, mongodb, nodejs, express</i></h5>
+                <div  class="col-sm-12 col-lg-9"><a href="https://hava-chat.netlify.app" target="_blank"><button> visit</button></a>
+                    <a href="https://github.com/Hamsa-Vardhan/Chat" target="_blank"><button><i class="fab fa-github"></i>repo</button></a>
                 </div>
             </div>
             <div class="container bigproj my-5">
-                <h3 class="col-9 offset-3 text-center">url shortener</h3>
+                <h3 class="col-sm-12 col-lg-9 offset-lg-3 text-center">url shortener</h3>
                 <img src="./images/urlshortener.JPG" alt="urlshortener">
-                <p class="col-9 offset-3 text-center">
+                <p class="mt-2 col-sm-12 col-lg-9 offset-lg-3 text-center">
                     Create an account. Activate it through mail. Have an forgot password option too. Enter into dashboard. Enter annoying long url to get peaceful short url.
                 </p>
-                <h5 class="col-9 offset-3"><b>Dev-Dependencies : </b><i>Angular, nodejs, express</i></h5>
-                <div  class="col-9 offset-3"><a href="https://hamsavardhan-urlshortener-frontend.netlify.app" target="_blank"><button>visit</button></a>
-                    <a href="#" target="_blank"><button>repo</button></a>
+                <h5 class="col-sm-12 col-lg-9 offset-lg-3"><b>Dev-Dependencies : </b><i>Angular, nodejs, express</i></h5>
+                <div  class="col-sm-12 col-lg-9 offset-lg-3"><a href="https://hamsavardhan-urlshortener-frontend.netlify.app" target="_blank"><button> visit</button></a>
+                    <a href="https://github.com/Hamsa-Vardhan/urlshortener-frontend" target="_blank"><button><i class="fab fa-github"></i>repo</button></a>
                 </div>
             </div>
             <div class="container bigproj my-5">
-                <h3 class="col-9 text-center">covid-19 visualizer</h3>
+                <h3 class="col-sm-12 col-lg-9 text-center">covid-19 visualizer</h3>
                 <img src="./images/covid.JPG" alt="covid-19">
-                <p class="col-9">
+                <p class="mt-2 col-sm-12 col-lg-9">
                     create an account. Login to view current status of covid cases. statewise activity details are also available with chart based presentation
                 </p>
-                <h5 class="col-9"><b>Dev-Dependencies : </b><i>Angular</i></h5>
-                <div class="col-9"><a href="https://covid19-visualizer-hamsavardhan.netlify.app" target="_blank" ><button>visit</button></a>
-                    <a href="#" target="_blank"><button>repo</button></a>
+                <h5 class="col-sm-12 col-lg-9"><b>Dev-Dependencies : </b><i>Angular</i></h5>
+                <div class="col-sm-12 col-lg-9"><a href="https://covid19-visualizer-hamsavardhan.netlify.app" target="_blank" ><button> visit</button></a>
+                    <a href="https://github.com/Hamsa-Vardhan/covid19-visualizer-HamsaVardhan" target="_blank"><button><i class="fab fa-github"></i>repo</button></a>
                 </div>
             </div>
             <div class="container bigproj my-5">
-                <h3 class="col-9 offset-3 text-center">razorpay checkout</h3>
+                <h3 class="col-sm-12 col-lg-9 offset-lg-3 text-center">razorpay checkout</h3>
                 <img src="./images/razorpay.JPG" alt="razorpay">
-                <p class="col-9 offset-3 text-center">
+                <p class="mt-2 col-sm-12 col-lg-9 offset-lg-3 text-center">
                     A basic integration of razorpay payment gateway.we can go in pay and buy for dupe items.money will be refunded after 3 days of transaction.
                 </p>
-                <h5 class="col-9 offset-3"><b>Dev-Dependencies : </b><i>Angular, flask</i></h5>
-                <div class="col-9 offset-3"><a href="https://razorpay-checkout-hamsavardhan.netlify.app" target="_blank" ><button>visit</button></a>
-                    <a href="#" target="_blank"><button>repo</button></a>
+                <h5 class="col-sm-12 col-lg-9 offset-lg-3"><b>Dev-Dependencies : </b><i>Angular, flask</i></h5>
+                <div class="col-sm-12 col-lg-9 offset-lg-3"><a href="https://razorpay-checkout-hamsavardhan.netlify.app" target="_blank" ><button> visit</button></a>
+                    <a href="https://github.com/Hamsa-Vardhan/razorpay-checkout-hamsavardhan" target="_blank"><button><i class="fab fa-github"></i>repo</button></a>
                 </div>
             </div>
             <div class="container bigproj my-5">
-                <h3 class="col-9 text-center">Github Replica</h3>
+                <h3 class="col-sm-12 col-lg-9 text-center">Github Replica</h3>
                 <img src="./images/github.JPG" alt="Github">
-                <p class="col-9">
-                    we can search for a repo or a user after entering to webapp. If wanted to know more user will be redirected to original  repo
+                <p class="mt-2 col-sm-12 col-lg-9">
+                    we can search for a <i class="fab fa-github"></i>repo or a user after entering to webapp. If wanted to know more user will be redirected to original  <i class="fab fa-github"></i>repo
                 </p>
-                <h5 class="col-9"><b>Dev-Dependencies : </b><i>Re
-                    actjs</i></h5>
-                <div  class="col-9"> <a href="https://hava-github-replica.netlify.app" target="_blank"><button>visit</button></a>
-                    <a href="#" target="_blank"><button>repo</button></a>
+                <h5 class="col-sm-12 col-lg-9"><b>Dev-Dependencies : </b><i>Reactjs</i></h5>
+                <div  class="col-sm-12 col-lg-9"> <a href="https://hava-github-replica.netlify.app" target="_blank"><button> visit</button></a>
+                    <a href="https://github.com/Hamsa-Vardhan/github-replica" target="_blank"><button><i class="fab fa-github"></i>repo</button></a>
                 </div>
             </div>
             <div class="smallproj container-fluid row">
-                <div class="container-fluid">
-                    <div class="col-3">
-                        <h3 class="col-12 text-center">NY Times</h3>
-                        <div class="container-fluid">
-                            <img src="./images/nytimes.JPG" alt="">
-                            <a href="https://hamsavardhan-nytimes-content.netlify.app/" target="_blank" class="col-12"><button>visit</button></a>
-                            <a href="#" target="_blank" class="col-12"><button>repo</button></a>
+                <div class="col-12 row">
+                    <div class="col-sm-12 col-lg-3 card">
+                        <img class="card-img-top" src="./images/nytimes.JPG" alt="">
+                        <div class="container-fluid card-body">
+                            <h3 class="col-12 card-header text-center">NY Times</h3>
+                            <p class="container card-text">Read the short news and if interested click to view more about it</p>
                         </div>
-                        <p class="container">Read the short news and if interested click to view more about it</p>
+                        <div class="container card-body">
+                            <a href="https://hamsavardhan-nytimes-content.netlify.app/" target="_blank" class="col-12"><button> visit</button></a>
+                            <a href="https://github.com/Hamsa-Vardhan/ny-times" target="_blank" class="col-12"><button><i class="fab fa-github"></i>repo</button></a>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <h3 class="col-12 text-center">Cricket game</h3>
-                        <div class="container-fluid">
-                            <img src="./images/cricket.JPG" alt="">
-                            <a href="https://hamsavardhan-cric-isfun.netlify.app/" target="_blank" class="col-12"><button>visit</button></a>
-                            <a href="#" target="_blank" class="col-12"><button>repo</button></a>
+                    <div class="col-sm-12 col-lg-3 card">
+                        <img class="card-img-top" src="./images/cricket.JPG" alt="">
+                        <div class="container-fluid card-body">
+                            <h3 class="col-12 card-header text-center">Cricket game</h3>
+                            <p class="container card-text">Two team cricket game similar to book cricket</p>
                         </div>
-                        <p class="container">Two team cricket game similar to book cricket</p>
+                        <div class="container card-body">
+                            <a href="https://hamsavardhan-cric-isfun.netlify.app/" target="_blank" class="col-12"><button> visit</button></a>
+                            <a href="https://github.com/Hamsa-Vardhan/play-cricket" target="_blank" class="col-12"><button><i class="fab fa-github"></i>repo</button></a>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <h3 class="col-12 text-center">tic tac toe</h3>
-                        <div class="container-fluid">
-                            <img src="./images/tictactoe.JPG" alt="">
-                            <a href="https://hava-tictactoe.netlify.app/" target="_blank" class="col-12"><button>visit</button></a>
-                            <a href="#" target="_blank" class="col-12"><button>repo</button></a>
+                    <div class="col-sm-12 col-lg-3 card">
+                        <img class="card-img-top" src="./images/tictactoe.JPG" alt="">
+                        <div class="container-fluid card-body">
+                            <h3 class="col-12 card-header text-center">tic tac toe</h3>
+                            <p class="container card-text">tic tac toe game but with colors instead of 'x' and 'o'</p>
                         </div>
-                        <p class="container">tic tac toe game but with colors instead of 'x' and 'o'</p>
+                        <div class="container card-body">
+                            
+                            <a href="https://hava-tictactoe.netlify.app/" target="_blank" class="col-12"><button> visit</button></a>
+                            <a href="https://github.com/Hamsa-Vardhan/tic-tac-toe" target="_blank" class="col-12"><button><i class="fab fa-github"></i>repo</button></a>
+                        </div>
                     </div>
                 </div>
                 <div class="container-fluid">
-                    <div class="col-3">
-                        <h3 class="col-12 text-center">weather details</h3>
-                        <div class="container-fluid">
-                            <img src="./images/weather.JPG" alt="">
-                            <a href="https://hamsavardhan-allcountries-weather.netlify.app/" target="_blank" class="col-12"><button>visit</button></a>
-                            <a href="#" target="_blank" class="col-12"><button>repo</button></a>
+                    <div class="col-sm-12 col-lg-3 card">
+                        <img class="card-img-top" src="./images/weather.JPG" alt="">
+                        <div class="container-fluid card-body">
+                            <h3 class="col-12 card-header text-center">weather details</h3>
+                            <p class="container card-text">Many Countries are listed and on click current weather is displayed</p>
                         </div>
-                        <p class="container">Many Countries are listed and on click current weather is displayed</p>
+                        <div class="container card-body">
+                            
+                            <a href="https://hamsavardhan-allcountries-weather.netlify.app/" target="_blank" class="col-12"><button> visit</button></a>
+                            <a href="https://github.com/Hamsa-Vardhan/country-weather" target="_blank" class="col-12"><button><i class="fab fa-github"></i>repo</button></a>
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <h3 class="col-12 text-center">Scheduler</h3>
-                        <div class="container-fluid">
-                            <img src="./images/scheduler.JPG" alt="">
-                            <a href="https://hava-daysandtopics.netlify.app/" target="_blank" rel="noopener noreferrer"><button>visit</button></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer"><button>repo</button></a>
+                    <div class="col-sm-12 col-lg-3 card">
+                        <img class="card-img-top" src="./images/scheduler.JPG" alt="">
+                        <div class="container-fluid card-body">
+                            <h3 class="col-12 card-header text-center">Scheduler</h3>
+                            <p class="container card-text">create topics to be taught for a day with content editor</p>
                         </div>
-                        <p class="container">create topics to be taught for a day with content editor</p>
+                        <div class="container card-body">
+                            <a class="col-5 mx-1" href="https://hava-daysandtopics.netlify.app/" target="_blank" rel="noopener noreferrer"><button> visit</button></a>
+                            <a class="col-5 mx-1" href="https://github.com/Hamsa-Vardhan/preSchedule/tree/master/pre-schedule" target="_blank" rel="noopener noreferrer"><button><i class="fab fa-github"></i>repo</button></a>
+
+                        </div>
                     </div>
-                    <div class="col-3">
-                        <h3 class="col-12 text-center">pricing cards</h3>
-                        <div class="container-fluid">
-                            <img src="./images/pricing.JPG" alt="">
-                            <a href="https://hava-pricing-cards.netlify.app/" target="_blank" rel="noopener noreferrer"><button>visit</button></a>
-                            <a href="#" target="_blank" rel="noopener noreferrer"><button>repo</button></a>
+                    <div class="col-sm-12 col-lg-3 card">
+                        <img class="card-img-top" src="./images/pricing.JPG" alt="">
+                        <div class="container-fluid card-body">
+                            <h3 class="col-12 card-header text-center">pricing cards</h3>
+                            <p class="container card-text">pricing card design trend in neumorphic design</p>
                         </div>
-                        <p class="container">pricing card design trend in neumorphic design</p>
+                        <div class="container card-body">      
+                            <a class="col-5 mx-1" href="https://hava-pricing-cards.netlify.app/" target="_blank" rel="noopener noreferrer"><button> visit</button></a>
+                            <a class="col-5 mx-1" href="https://github.com/Hamsa-Vardhan/pricing-cards" target="_blank" rel="noopener noreferrer"><button><i class="fab fa-github"></i>repo</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="container npm"></div>
         </div>
     </main>
-    <footer id="contact">
-        <ul>
-            <li><a href="https://github.com/Hamsa-Vardhan">github</a></li>
-            <li><a href="https://linkedin.com/in/hamsavardhans-profile">linkedin</a></li>
-            <li><a href="https://instagram.com/hamsa_vardhan/">instagram</a></li>
+    <footer id="contact" class="container-fluid row rounded">
+        <ul class="row col-12">
+            <li class="col-sm-5 text-center my-3 mx-1 col-lg-2"><a href="mailto:hamsavardhan99@gmail.com" target="_top"><i class="fas fa-envelope-open-text"></i> mail</a></li>
+            <li class="col-sm-5 text-center my-3 mx-1 col-lg-2"><a href="https://github.com/Hamsa-Vardhan" target="_blank"> <i class="fab fa-github"></i> github</a></li>
+            <li class="col-sm-5 text-center my-3 mx-1 col-lg-2"><a href="https://linkedin.com/in/hamsavardhans-profile" target="_blank"> <i class="fab fa-linkedin"></i> linkedin</a></li>
+            <li class="col-sm-5 text-center my-3 mx-1 col-lg-2"><a href="https://instagram.com/hamsa_vardhan/" target="_blank"> <i class="fab fa-instagram"></i> instagram</a></li>
         </ul>
     </footer>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 </html>
