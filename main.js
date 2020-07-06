@@ -7,7 +7,6 @@ window.addEventListener('scroll', () => {
 		}
 	} else {
 		nav.backgroundColor = 'transparent';
-		nav.zIndex = 0;
 	}
 });
 
@@ -16,3 +15,15 @@ document.querySelectorAll('nav li a').forEach((v) =>
 		document.querySelector('#burger').checked = false;
 	})
 );
+
+const observer = new IntersectionObserver((entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.style.animation = 'anim 3s forwards ease-out';
+		}
+	});
+});
+
+document.querySelectorAll('img').forEach((v) => console.log(v));
+
+document.querySelectorAll('img').forEach((v) => observer.observe(v));
