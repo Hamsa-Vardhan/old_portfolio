@@ -82,6 +82,8 @@ body {
 				li {
 					padding: 0.25rem 0.5rem;
 					font-size: 1.2rem;
+					border-top-left-radius: 0.5rem;
+					border-bottom-right-radius: 0.5rem;
 					a {
 						&:hover {
 							text-decoration: none;
@@ -480,11 +482,27 @@ body {
 	margin-right: 0.2rem;
 }
 @keyframes anim {
-	from {
-		transform: translatey(20%);
-		opacity: 0;
+	0% {
+		transform: translateY(0%);
 	}
-	to {
+	50% {
+		transform: translateY(-2%);
+	}
+	100% {
+		transform: translateY(0%);
+	}
+}
+
+@keyframes text {
+	0% {
+		transform: translateY(0%);
+		opacity: 0.8;
+	}
+	50% {
+		transform: translateY(-0.5%);
+		opacity: 0.5;
+	}
+	100% {
 		transform: translateY(0%);
 		opacity: 1;
 	}

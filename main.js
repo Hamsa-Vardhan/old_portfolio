@@ -16,14 +16,32 @@ document.querySelectorAll('nav li a').forEach((v) =>
 	})
 );
 
-const observer = new IntersectionObserver((entries) => {
-	entries.forEach((entry) => {
-		if (entry.isIntersecting) {
-			entry.target.style.animation = 'anim 3s forwards ease-out';
-		}
-	});
-});
-
-document.querySelectorAll('img').forEach((v) => console.log(v));
+const observer = new IntersectionObserver(
+	(entries) => {
+		entries.forEach((entry, index, arr) => {
+			if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+				entry.target.style.animation = 'anim 3s forwards ease-out';
+			}
+		});
+	},
+	{
+		threshold: 0.5
+	}
+);
 
 document.querySelectorAll('img').forEach((v) => observer.observe(v));
+
+const handlep = (entries) => {
+	entries.forEach((entry) => {
+		if (entry.isIntersecting) {
+			entry.target.style.animation = 'text 2s ease-out';
+		}
+	});
+};
+observer.unobserve(document.querySelector('#index-image'));
+
+const pobserver = new IntersectionObserver(handlep);
+
+document.querySelectorAll('p').forEach((v) => pobserver.observe(v));
+
+pobserver.unobserve(document.querySelector('#totype'));
