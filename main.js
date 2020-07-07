@@ -45,3 +45,13 @@ const pobserver = new IntersectionObserver(handlep);
 document.querySelectorAll('p').forEach((v) => pobserver.observe(v));
 
 pobserver.unobserve(document.querySelector('#totype'));
+
+const str1 = 'Hamsa Vardhan';
+const str2 = 'full stack developer';
+
+let typed = new Typed('#addtype', {
+	strings: [ str1.bold(), str2.italics() ],
+	typeSpeed: 60,
+	backSpeed: 60,
+	loop: true
+});
